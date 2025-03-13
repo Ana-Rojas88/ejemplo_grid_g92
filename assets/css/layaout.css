@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: blue;
+  grid-area: header;
+}
+menu {
+  background-color: chocolate;
+  grid-area: navegacion;
+}
+main {
+  background-color: blueviolet;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+padding: 1rem;
+}
+footer {
+  background-color: black;
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    " navegacion header header"
+    "navegacion main main "
+    " navegacion footer footer";
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-rows: 1fr 4fr 0.5fr;
+  height: 100vh;
+}
+
+.grid-item {
+  width: 18rem;
+  background-color: gainsboro;
+}
